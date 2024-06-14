@@ -2,12 +2,12 @@ import Logo from "../assets/Logo.svg";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center px-28 py-11 border-b">
-      <div className="w-28">
+    <header className="bg-white flex inset-y-0 w-full fixed justify-between items-center px-24 py-4 h-28">
+      <div className="w-20">
         <img src={Logo} alt="Q and M Logo" />
       </div>
       <nav>
-        <ul className="flex gap-16 text-xl font-bold">
+        <ul className="flex gap-12 text-base font-bold">
           <li>
             <a href="#" className="hover:underline">About</a>
           </li>

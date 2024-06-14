@@ -1,11 +1,12 @@
+import Desktop2 from "../components/Desktop2";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 const Home = () => {
   return (
-    <div>
+    <div className="relative">
       <Header />
-      <h1>Welcome Home</h1>
+      <Desktop2 />
       <Footer />
     </div>
   );

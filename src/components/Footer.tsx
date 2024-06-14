@@ -3,17 +3,17 @@ import Arrow from "../assets/Arrow-left.svg";
 
 const Footer = () => {
   return (
-    <footer className="fixed bottom-0 w-full bg-gray-800 text-white py-8 px-32">
+    <footer className="text-xs bottom-0 w-full bg-gray-800 text-white py-4 px-32">
       <div className="flex justify-between items-center">
-        <div className="w-28">
+        <div className="w-20">
           <img src={Logo} alt="Q and M Logo" />
         </div>
         <div className="flex flex-1 justify-center gap-12">
           <div className="w-[500px]">
-          <p className="max-w-4xl text-2xl font-bold not-italic mb-8">
+          <p className="text-base font-bold not-italic mb-8">
             123 Market St. #22B, Charlottesville, California 44635
           </p>
-          <div className=" flex-col gap-5 text-sm">
+          <div className="flex-col gap-5 ">
             <p><a href="#" className="underline">(434) 546-4356</a></p>
             <p><a href="#" className="underline">contact@lift.agency</a></p>            
           </div>
@@ -42,8 +42,8 @@ const Footer = () => {
           <img src={Arrow} alt="Arrow" />
         </div>
       </div>
-      <div className="text-center mt-4">
-        <p className="text-sm">© 2020 Lift Media. All rights reserved.</p>
+      <div className="text-center">
+        <p>© 2020 Lift Media. All rights reserved.</p>
       </div>
     </footer>
   );
