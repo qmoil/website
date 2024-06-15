@@ -17,10 +17,10 @@ const Header = () => {
         <div className="flex md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-black focus:outline-none"
+            className="text-black focus:outline-none group"
           >
             <svg
-              className="w-6 h-6"
+              className="w-6 h-6 group-hover:text-[#282491]"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -36,29 +36,20 @@ const Header = () => {
           </button>
         </div>
         <ul
-          className={`${
-            isOpen ? "flex" : "hidden"
-          } flex-col md:flex md:flex-row gap-6 md:gap-8 lg:gap-12 text-base font-bold absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent p-4 md:p-0`}
+          className={`${isOpen ? "flex" : "hidden"} flex-col md:flex md:flex-row gap-6 md:gap-8 lg:gap-12 text-base font-bold absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent p-4 md:p-0`}
         >
-          <li>
-            <a href="#" className="hover:underline block md:inline">About</a>
+          <li className="hover-item">
+            <a href="#" className="hover-link block md:inline hover:text-blue-500">About</a>
           </li>
-          <li>
-            <a href="#" className="hover:underline block md:inline">Services</a>
+          <li className="hover-item">
+            <a href="#" className="hover-link block md:inline hover:text-blue-500">Services</a>
           </li>
-          <li>
-            <a href="#" className="hover:underline block md:inline">Contact</a>
+          <li className="hover-item">
+            <a href="#" className="hover-link block md:inline hover:text-blue-500">Contact</a>
           </li>
         </ul>
       </nav>
     </header>
-
-
-
-    // <div className='bg-white w-full h-24 flex justify-between'>
-    //   <div className='bg-black w-5'></div>
-    //   <div className='bg-black w-5'></div>
-    // </div>
   );
 };
 
