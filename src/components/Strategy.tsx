@@ -34,7 +34,7 @@ export default function Strategy({}: StrategyProps) {
         </div>
       </div>
 
-      <div className={`col-span-1  h-96 w-full p-5 `} style={{ backgroundImage: `url('${strategy[1].image}'` }}>
+      <div className={`col-span-1  h-96  p-5 `} style={{ backgroundImage: `url('${strategy[1].image}'` }}>
         <div className="text-black text-3xl text-center">{strategy[1].description}</div>
       </div>
 
