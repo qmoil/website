@@ -1,7 +1,13 @@
+import Desktop2 from "../components/Desktop2";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+
 const Home = () => {
   return (
-    <div>
-      <h1>Welcome Home</h1>
+    <div className="relative w-full">
+      <Header />
+      <Desktop2 />
+      <Footer />
     </div>
   );
 };

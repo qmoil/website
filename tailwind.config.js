@@ -14,6 +14,9 @@ export default {
       "mdLite": "970px",
       ...defaultTheme.screens,
     },
+    color: {
+      'blue200': '#1C1B42'
+    },
     extend: {},
   },
   plugins: [],
