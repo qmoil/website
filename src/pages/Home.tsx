@@ -4,7 +4,7 @@ import Header from "../components/Header";
 
 const Home = () => {
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <Header />
       <Desktop2 />
       <Footer />
