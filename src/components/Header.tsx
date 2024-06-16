@@ -9,9 +9,9 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white flex items-center justify-between fixed inset-y-0 w-full px-6 py-4 sm:px-8 sm:py-4 lg:px-24 lg:py-4 h-20 sm:h-24 xs:h-20 md:h-28 z-50">
+    <header className="bg-white flex items-center justify-between fixed inset-y-0 w-full px-6 py-4 sm:px-8 sm:py-4 lg:px-24 lg:py-4 h-20 sm:h-24 xs:h-20 md:h-28 z-50" id="top">
       <div className="w-16 sm:w-20">
-        <img src={Logo} alt="Q and M Logo" />
+      <a href="#" className=""><img src={Logo} alt="Q and M Logo" /></a>
       </div>
       <nav>
         <div className="flex md:hidden">
