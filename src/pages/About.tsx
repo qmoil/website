@@ -1,10 +1,12 @@
 import Rectangle65 from '../assets/Rectangle665.svg';
 import Mission from '../assets/Mission.svg';
 import OurBusiness from '../components/OurBusiness';
+import ScrollToTopButton from '../components/ScrollToTopButton';
 
 const About = () => {
   return (
-    <div className="xs:mt-20 sm:mt-24 pt-12 md:mt-28 flex flex-col gap-8">
+    <div className="mt-20 sm:mt-24 pt-12 md:mt-28 flex flex-col gap-8">
+      <ScrollToTopButton />
       <div className="text-center px-4 sm:px-8">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl text-[#1C1B42] mb-4 sm:mb-8 font-bold">
           Your Reliable Partner in Nigeria's Energy Future
@@ -79,9 +81,7 @@ const About = () => {
             and personalized attention to all our clients.
           </p>
           <p>
-            <strong className="font-bold">
-              Investing in Nigeria's Future:
-            </strong>
+            <strong className="font-bold">Investing in Nigeria's Future:</strong>
             We are committed to supporting the nation's economic growth and
             development by providing reliable energy solutions.
           </p>
@@ -110,9 +110,7 @@ const About = () => {
             </p>
           </div>
           <div>
-            <strong className="font-bold">
-              Investing in Nigeria's Future:
-            </strong>
+            <strong className="font-bold">Investing in Nigeria's Future:</strong>
             <p>
               We are committed to supporting the nation's economic growth and
               development by providing reliable energy solutions.
