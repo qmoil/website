@@ -34,10 +34,10 @@ const Header = () => {
         <div className="flex md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-black focus:outline-none"
+            className="text-black focus:outline-none group"
           >
             <svg
-              className="w-6 h-6"
+              className="w-6 h-6 group-hover:text-[#282491]"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -60,7 +60,7 @@ const Header = () => {
           {links.map((link) => (
             <Link
               to={link.linkedTo}
-              className="hover:underline block md:inline"
+              className="hover-link block md:inline hover:text-blue-500"
             >
               {link.title}
             </Link>

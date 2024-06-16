@@ -32,11 +32,11 @@ const OurBusiness = () => {
       {/* Desktop View */}
       <div className="hidden md:grid md:grid-cols-3 gap-8">
         {ourBusiness.map((business, index) => (
-          <div key={index} className="border bg-[#FFFAEB] p-4 rounded-lg">
+          <div key={index} className="bg-[#FFFAEB] p-4 rounded-lg">
             <div className="mb-2">
               <img src={business.img} alt="" className="w-full h-48 object-cover" />
             </div>
-            <div className='border p-4 font-bold'>
+            <div className=' p-4 font-bold'>
               <h1 className="text-2xl mb-4">{business.h1}</h1>
               <p className='text-xs'>{business.p}</p>
             </div>
@@ -47,11 +47,11 @@ const OurBusiness = () => {
       {/* Mobile View with Horizontal Scrolling */}
       <div className="md:hidden overflow-x-scroll flex">
         {ourBusiness.map((business, index) => (
-          <div key={index} className="inline-block border bg-[#FFFAEB] p-4 rounded-lg mr-4 min-w-72">
+          <div key={index} className="inline-block bg-[#FFFAEB] p-4 rounded-lg mr-4 min-w-72">
             <div className="mb-2">
               <img src={business.img} alt="" className="w-full h-48 object-cover" />
             </div>
-            <div className='border p-4 font-bold'>
+            <div className=' p-4 font-bold'>
               <h1 className="text-2xl mb-4">{business.h1}</h1>
               <p className='text-xs'>{business.p}</p>
             </div>
