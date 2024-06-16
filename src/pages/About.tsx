@@ -62,7 +62,7 @@ const About = () => {
             Why Choose Q and M Gas?
           </h1>
         </div>
-        <div className="hidden md:block md:w-3/5 font-thin flex flex-col gap-2">
+        <div className="hidden md:w-3/5 font-thin md:flex flex-col gap-2">
           <p>
             <strong className="font-bold">Reliability You Can Count On:</strong>
             We understand the importance of uninterrupted operations. That's why
@@ -87,7 +87,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className=" m-auto block md:hidden text-center gap-4 font-thin flex flex-col gap-4">
+        <div className="m-auto md:hidden text-center font-thin flex flex-col gap-4">
           <div>
             <strong className="font-bold">Reliability You Can Count On:</strong>
             <p>
