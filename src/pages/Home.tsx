@@ -1,15 +1,5 @@
-import Desktop2 from "../components/Desktop2";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-
 const Home = () => {
-  return (
-    <div className="relative w-full">
-      <Header />
-      <Desktop2 />
-      <Footer />
-    </div>
-  );
+  return <div className="">Welcome home</div>;
 };
 
 export default Home;

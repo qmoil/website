@@ -1,8 +1,8 @@
-import Rectangle65 from "../assets/Rectangle665.svg";
-import Mission from "../assets/Mission.svg";
-import OurBusiness from "./OurBusiness";
+import Rectangle65 from '../assets/Rectangle665.svg';
+import Mission from '../assets/Mission.svg';
+import OurBusiness from '../components/OurBusiness';
 
-const Desktop2 = () => {
+const About = () => {
   return (
     <div className="xs:mt-20 sm:mt-24 md:mt-28 flex flex-col gap-8">
       <div className="text-center px-4 sm:px-8">
@@ -65,19 +65,25 @@ const Desktop2 = () => {
         <div className="hidden md:block md:w-3/5 font-thin flex flex-col gap-2">
           <p>
             <strong className="font-bold">Reliability You Can Count On:</strong>
-            We understand the importance of uninterrupted operations. That's why we prioritize timely deliveries and consistent fuel quality.
+            We understand the importance of uninterrupted operations. That's why
+            we prioritize timely deliveries and consistent fuel quality.
           </p>
           <p>
             <strong className="font-bold">Commitment to Efficiency:</strong>
-            We optimize our logistics to ensure cost-effective solutions and minimize fuel waste.
+            We optimize our logistics to ensure cost-effective solutions and
+            minimize fuel waste.
           </p>
           <p>
             <strong className="font-bold">Unwavering Customer Focus:</strong>
-            Your satisfaction is our top priority. We provide dedicated support and personalized attention to all our clients.
+            Your satisfaction is our top priority. We provide dedicated support
+            and personalized attention to all our clients.
           </p>
           <p>
-            <strong className="font-bold">Investing in Nigeria's Future:</strong>
-            We are committed to supporting the nation's economic growth and development by providing reliable energy solutions.
+            <strong className="font-bold">
+              Investing in Nigeria's Future:
+            </strong>
+            We are committed to supporting the nation's economic growth and
+            development by providing reliable energy solutions.
           </p>
         </div>
 
@@ -85,33 +91,37 @@ const Desktop2 = () => {
           <div>
             <strong className="font-bold">Reliability You Can Count On:</strong>
             <p>
-              We understand the importance of uninterrupted operations. That's why we prioritize timely deliveries and consistent fuel quality.
+              We understand the importance of uninterrupted operations. That's
+              why we prioritize timely deliveries and consistent fuel quality.
             </p>
           </div>
           <div>
             <strong className="font-bold">Commitment to Efficiency:</strong>
             <p>
-              We optimize our logistics to ensure cost-effective solutions and minimize fuel waste.
+              We optimize our logistics to ensure cost-effective solutions and
+              minimize fuel waste.
             </p>
           </div>
           <div>
             <strong className="font-bold">Unwavering Customer Focus:</strong>
             <p>
-              Your satisfaction is our top priority. We provide dedicated support and personalized attention to all our clients.
+              Your satisfaction is our top priority. We provide dedicated
+              support and personalized attention to all our clients.
             </p>
           </div>
           <div>
-            <strong className="font-bold">Investing in Nigeria's Future:</strong>
+            <strong className="font-bold">
+              Investing in Nigeria's Future:
+            </strong>
             <p>
-              We are committed to supporting the nation's economic growth and development by providing reliable energy solutions.
+              We are committed to supporting the nation's economic growth and
+              development by providing reliable energy solutions.
             </p>
           </div>
         </div>
-
-        
       </div>
     </div>
   );
 };
 
-export default Desktop2;
+export default About;
