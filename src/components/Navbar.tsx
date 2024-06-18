@@ -59,6 +59,7 @@ const Navbar = () => {
         >
           {links.map((link) => (
             <Link
+              key={link.title}
               to={link.linkedTo}
               className="hover-link block md:inline hover:text-blue-500"
             >

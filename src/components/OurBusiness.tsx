@@ -3,6 +3,10 @@ import Frame2 from '../assets/Frame2.svg';
 import Frame3 from '../assets/Frame3.svg';
 import { useState } from 'react';
 
+interface OurBusinessProps {
+  isService?: boolean;
+}
+
 const ourBusinessObj = [
   {
     img: Frame3,
@@ -21,20 +25,33 @@ const ourBusinessObj = [
   },
 ];
 
-const OurBusiness = () => {
+const OurBusiness = ({ isService }: OurBusinessProps) => {
   const [ourBusiness] = useState(ourBusinessObj);
 
   return (
-    <div className="bg-[#FECA38] text-[#191406] p-10">
-      <div className="text-5xl font-bold mb-6">
-        <h1>Our</h1>
-        <h1>Business</h1>
-      </div>
+    <div
+      className={`${!isService && 'bg-[#FECA38]'} text-[#191406] px-5 md:px-10`}
+    >
+      {!isService ? (
+        <div className="text-5xl font-bold mb-6">
+          <h1>Our</h1>
+          <h1>Business</h1>
+        </div>
+      ) : (
+        <h1 className="font-bold text-center mb-5 md:mb-10 text-4xl md:text-6xl text-[#090916]">
+          Our Services
+        </h1>
+      )}
 
       {/* Desktop View */}
       <div className="hidden md:grid md:grid-cols-3 gap-8">
         {ourBusiness.map((business, index) => (
-          <div key={index} className="bg-[#FFFAEB] p-4 rounded-lg">
+          <div
+            key={index}
+            className={`${
+              isService ? 'bg-[#0E0E21] text-white' : 'bg-[#FFFAEB]'
+            } p-4 rounded-lg`}
+          >
             <div className="mb-2">
               <img
                 src={business.img}
@@ -55,7 +72,9 @@ const OurBusiness = () => {
         {ourBusiness.map((business, index) => (
           <div
             key={index}
-            className="inline-block bg-[#FFFAEB] p-4 rounded-lg mr-4 min-w-72"
+            className={`inline-block ${
+              isService ? 'bg-[#0E0E21] text-white' : 'bg-[#FFFAEB]'
+            } p-4 rounded-lg mr-4 min-w-72`}
           >
             <div className="mb-2">
               <img

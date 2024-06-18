@@ -3,6 +3,7 @@ import Mission from '../assets/Mission.svg';
 import OurBusiness from '../components/OurBusiness';
 import BulletPoint from '../components/BulletPoint';
 import PageHeader from '../components/PageHeader';
+import Contactform from '../components/Contactform';
 
 const bulletPoints = [
   {
@@ -26,7 +27,7 @@ we prioritize timely deliveries and consistent fuel quality.`,
 
 const About = () => {
   return (
-    <div className="xs:mt-20 sm:mt-24 pt-12 md:mt-28 flex flex-col gap-8">
+    <div className="mt-20 sm:mt-24 pt-12 md:mt-28 flex flex-col gap-8">
       <PageHeader
         description="A dedicated and reliable diesel distribution and supply company
           targeting retailers, industries, households, hotels, and restaurants
@@ -35,10 +36,10 @@ const About = () => {
         image={Rectangle65}
         title={`Your Reliable Partner in Nigeria's Energy Future`}
       />
-      <div className="flex flex-col lg:flex-row lg:m-auto lg:px-16 lg:justify-between gap-6 lg:gap-10 px-4 sm:px-8">
+      <div className="flex flex-col md:flex-row md:m-auto md:px-16 md:justify-between gap-6 md:gap-10 px-4 sm:px-8 py-9 text-center">
         <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[#1C1B42]">
           <h2>About</h2>
-          <h2>M and Q</h2>
+          <h2>Q and M</h2>
         </div>
         <p className="text-base sm:text-lg font-thin lg:w-3/5">
           Founded in [Year], Q and M Gas began with a vision to revolutionize
@@ -74,6 +75,9 @@ const About = () => {
       </div>
       <div>
         <BulletPoint title="Why Choose Q and M Gas?" points={bulletPoints} />
+      </div>
+      <div>
+        <Contactform />
       </div>
     </div>
   );

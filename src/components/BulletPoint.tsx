@@ -12,8 +12,8 @@ const BulletPoint = ({ title, points }: IBulletPointProps) => {
         </h1>
       </div>
       <div className="hidden md:w-3/5 font-thin md:flex flex-col gap-2">
-        {points.map((point) => (
-          <p>
+        {points.map((point, index) => (
+          <p key={index}>
             <strong className="font-bold">{point.mainPoint}</strong>
             {point.secondaryPoint}
           </p>
@@ -21,8 +21,8 @@ const BulletPoint = ({ title, points }: IBulletPointProps) => {
       </div>
 
       <div className="m-auto md:hidden text-center font-thin flex flex-col gap-4">
-        {points.map((point) => (
-          <div>
+        {points.map((point, index) => (
+          <div key={index}>
             <strong className="font-bold">{point.mainPoint}</strong>
             <p>{point.secondaryPoint}</p>
           </div>
