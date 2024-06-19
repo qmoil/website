@@ -1,25 +1,29 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import Arrow from '../assets/Arrow-left.svg'; 
+import Arrow from '../assets/Arrow-left.svg';
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const scrollTimeout = useRef(null);
+  const scrollTimeout = useRef<number | undefined>(undefined);
 
-  const scrollToTop = (event) => {
+  const scrollToTop = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
     event.preventDefault();
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   };
 
   const handleScroll = useCallback(() => {
     if (window.scrollY > 0) {
       setIsVisible(true);
-      clearTimeout(scrollTimeout.current);
-      scrollTimeout.current = setTimeout(() => {
+      if (scrollTimeout.current !== undefined) {
+        clearTimeout(scrollTimeout.current);
+      }
+      scrollTimeout.current = window.setTimeout(() => {
         setIsVisible(false);
-      }, 2000); 
+      }, 2000);
     } else {
       setIsVisible(false);
     }
@@ -29,12 +33,14 @@ const ScrollToTopButton = () => {
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      clearTimeout(scrollTimeout.current);
+      if (scrollTimeout.current !== undefined) {
+        clearTimeout(scrollTimeout.current);
+      }
     };
   }, [handleScroll]);
 
   return (
-    <div className="fixed bottom-4 right-4">
+    <div className="fixed bottom-4 right-4 z-50">
       {isVisible && (
         <div className="flex justify-center items-center bg-white w-12 h-12 md:w-16 md:h-16 rounded-full transition-opacity duration-500 opacity-75 hover:opacity-100">
           <a href="#" onClick={scrollToTop} aria-label="Scroll to top">

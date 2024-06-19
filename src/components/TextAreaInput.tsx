@@ -2,7 +2,7 @@ import { ChangeEvent, FocusEventHandler } from 'react';
 
 interface TextAreaInputProps {
   name: string;
-  value: string | ReadonlyArray<string> | number;
+  value?: string | ReadonlyArray<string> | number;
   changed?: (event: ChangeEvent<HTMLTextAreaElement>) => void;
   placeholder?: string;
   classDef?: string;
@@ -26,7 +26,7 @@ const TextAreaInput = ({
       <textarea
         id={id}
         onBlur={onBlur}
-        className={`h-[300px]  text-[black] dark:text-[white] text-[20px] p-2 resize-none ${classDef}`}
+        className={`h-40 px-5 py-3 text-black dark:text-white border border-solid border-gray-500 resize-none ${classDef}`}
         name={name}
         onChange={changed}
         value={value}

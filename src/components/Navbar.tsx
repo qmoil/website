@@ -57,15 +57,20 @@ const Navbar = () => {
             isOpen ? 'flex' : 'hidden'
           } flex-col md:flex md:flex-row gap-6 md:gap-8 lg:gap-12 text-base font-bold absolute md:static top-16 left-0 w-full md:w-auto bg-gray-50 md:bg-transparent p-4 md:p-0`}
         >
-          {links.map((link) => (
-            <Link
-              key={link.title}
-              to={link.linkedTo}
-              className="hover-link block md:inline hover:text-blue-500"
-            >
-              {link.title}
-            </Link>
-          ))}
+          {links.map((link) => {
+            if (link.title === 'Contact') {
+              return <a href="#contact">{link.title}</a>; // maybe the anchor tag can be replaced
+            }
+            return (
+              <Link
+                key={link.title}
+                to={link.linkedTo}
+                className="hover-link block md:inline hover:text-blue-500"
+              >
+                {link.title}
+              </Link>
+            );
+          })}
         </ul>
       </nav>
     </header>

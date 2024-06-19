@@ -30,7 +30,7 @@ const OurBusiness = ({ isService }: OurBusinessProps) => {
 
   return (
     <div
-      className={`${!isService && 'bg-[#FECA38]'} text-[#191406] px-5 md:px-10`}
+      className={`${!isService && 'bg-[#FECA38]'} text-[#191406] px-5 md:p-10`}
     >
       {!isService ? (
         <div className="text-5xl font-bold mb-6">

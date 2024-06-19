@@ -3,6 +3,7 @@ import Input from './Input';
 import ContactIMage from '../assets/contact_image.svg';
 import Mobile from '../assets/mobile.svg';
 import Email from '../assets/email.svg';
+import TextAreaInput from './TextAreaInput';
 
 const formContact = [
   { logo: Mobile, title: 'PHONE', value: '09037890629' },
@@ -11,7 +12,10 @@ const formContact = [
 
 export default function Contactform() {
   return (
-    <div className="md:items-center md:grid md:grid-cols-2 px-5 py-8 gap-10">
+    <div
+      id="contact"
+      className="md:items-center md:grid md:grid-cols-2 px-5 py-8 gap-10"
+    >
       <div>
         <div className="flex flex-col gap-5 px-2 text-center">
           <h1 className="font-bold text-4xl md:text-6xl text-[#090916]">
@@ -26,16 +30,15 @@ export default function Contactform() {
           <Input type="text" name="name" placeholder="Name *" />
           <Input type="email" name="email" placeholder="Email *" />
           <Input type="tel" name="phone" placeholder="Phone Number *" />
-          <Input
-            type="select"
-            name="how"
-            placeholder="How did you find us?"
-            isSelect
+          <TextAreaInput
+            classDef="w-[100%]"
+            name="moreInfo"
+            placeholder="How can i partner with you?"
           />
 
           <Button
             title="Send"
-            classDefinition="bg-black text-white h-12 border px-5 py-3 gap-2 border-solid border-gray-500 font-bold text-base"
+            classDefinition="bg-black hover:bg-gray-700 text-white h-12 border px-5 py-3 gap-2 border-solid border-gray-500 font-bold text-base"
           />
 
           <div className="flex flex-col md:flex-row md:justify-between gap-3 mt-5">
