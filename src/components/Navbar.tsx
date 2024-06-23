@@ -24,9 +24,9 @@ const Navbar = ({ isSideNavOpen, setIsSideNavOpen }: NavbarProps) => {
   };
 
   return (
-    <header className="bg-white flex items-center justify-between fixed inset-y-0 w-full px-6 py-4 sm:px-8 sm:py-4 lg:px-24 lg:py-4 h-20 sm:h-24 xs:h-20 md:h-28 z-40">
-      <Link to={PATH.HOME} className="w-16 sm:w-20">
-        <img src={Logo} alt="Q and M Logo" />
+    <header className="bg-white flex items-center justify-between fixed inset-y-0 w-full px-6 py-4 sm:px-8 sm:py-4 lg:px-24 lg:py-4 h-24 md:h-32 z-40">
+      <Link to={PATH.HOME} className="w-20 h-24  md:w-28 md:h-32">
+        <img src={Logo} alt="Q & M Logo" className="w-full h-full" />
       </Link>
       <nav>
         <div className="flex md:hidden">
@@ -53,7 +53,7 @@ const Navbar = ({ isSideNavOpen, setIsSideNavOpen }: NavbarProps) => {
         <ul
           className={`hidden md:flex md:flex-row gap-6 md:gap-8 lg:gap-12 text-base font-bold absolute md:static top-16 left-0 w-full md:w-auto bg-gray-50 md:bg-transparent p-4 md:p-0`}
         >
-          {NAVLINKS.slice(1).map((link) => {
+          {NAVLINKS.map((link) => {
             if (link.title === 'Contact') {
               return (
                 <a

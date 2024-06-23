@@ -31,7 +31,7 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row justify-between  md:items-center">
         <div className="w-20 mb-4 md:mb-0">
           <Link to={PATH.HOME} className="w-16 sm:w-20">
-            <img src={Logo} alt="Q and M Logo" className="max-w-full h-auto" />
+            <img src={Logo} alt="Logo" className="max-w-full h-auto" />
           </Link>
         </div>
         <div className="flex flex-col md:flex-row flex-1 justify-center gap-6 md:gap-12 text-left">

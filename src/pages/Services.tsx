@@ -17,7 +17,7 @@ const bulletPoints = [
   },
   {
     mainPoint: `Peace of Mind: `,
-    secondaryPoint: `With Q and M Gas, you can focus on what matters most – running your business. We take care of the fuel, ensuring a reliable and stress-free experience.`,
+    secondaryPoint: `With Q & M Oil and Gas, you can focus on what matters most – running your business. We take care of the fuel, ensuring a reliable and stress-free experience.`,
   },
   {
     mainPoint: `Dedicated Partner: `,
@@ -35,9 +35,9 @@ const Services = () => {
         transition={{ duration: 1.0 }}
       >
         <PageHeader
-          description="At Q and M Gas, we're committed to being your one-stop shop for all things diesel. We offer a comprehensive suite of services designed to streamline your operations and ensure you have the fuel you need, when you need it."
+          description="At Q & M Oil and Gas, we're committed to being your one-stop shop for all things diesel. We offer a comprehensive suite of services designed to streamline your operations and ensure you have the fuel you need, when you need it."
           image={serviceHeader}
-          title={`Powering Your Success: Q and M Gas Services`}
+          title={`Powering Your Success: Q & M Oil and Gas Services`}
         />
       </motion.div>
 
@@ -58,7 +58,7 @@ const Services = () => {
         transition={{ duration: 1.0 }}
       >
         <BulletPoint
-          title="Benefits of Partnering with Q and M Gas:"
+          title="Benefits of Partnering with Q & M Oil and Gas:"
           points={bulletPoints}
         />
       </motion.div>

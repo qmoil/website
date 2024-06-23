@@ -55,14 +55,14 @@ const About = () => {
       >
         <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[#1C1B42]">
           <h2>About</h2>
-          <h2>Q and M</h2>
+          <h2>Q & M Oil and Gas</h2>
         </div>
         <p className="text-base sm:text-lg font-thin lg:w-3/5">
-          Founded in [Year], Q and M Gas began with a vision to revolutionize
-          the diesel supply chain in Nigeria. We recognized the need for a
-          dependable provider that prioritizes customer satisfaction. Since
-          then, we've grown into a trusted partner for businesses of all sizes,
-          powering their operations and driving their success.
+          Founded in 2024, Q & M Oil and Gas began with a vision to
+          revolutionize the diesel supply chain in Nigeria. We recognized the
+          need for a dependable provider that prioritizes customer satisfaction.
+          Since then, we've grown into a trusted partner for businesses of all
+          sizes, powering their operations and driving their success.
         </p>
       </motion.div>
       <motion.div
@@ -107,7 +107,10 @@ const About = () => {
         variants={LEFT_TO_RIGHT}
         transition={{ duration: 1.0 }}
       >
-        <BulletPoint title="Why Choose Q and M Gas?" points={bulletPoints} />
+        <BulletPoint
+          title="Why Choose Q & M Oil and Gas?"
+          points={bulletPoints}
+        />
       </motion.div>
       <motion.div
         initial="hidden"
