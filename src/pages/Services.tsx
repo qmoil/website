@@ -1,8 +1,10 @@
+import { motion } from 'framer-motion';
 import serviceHeader from '../assets/serviceHeader.svg';
 import BulletPoint from '../components/BulletPoint';
 import Contactform from '../components/Contactform';
 import OurBusiness from '../components/OurBusiness';
 import PageHeader from '../components/PageHeader';
+import { LEFT_TO_RIGHT, TOP_TO_BOTTOM } from '../utils/animation-constants';
 
 const bulletPoints = [
   {
@@ -26,23 +28,48 @@ const bulletPoints = [
 const Services = () => {
   return (
     <div className="mt-20 sm:mt-24 pt-12 md:mt-28 flex flex-col gap-8">
-      <PageHeader
-        description="At Q and M Gas, we're committed to being your one-stop shop for all things diesel. We offer a comprehensive suite of services designed to streamline your operations and ensure you have the fuel you need, when you need it."
-        image={serviceHeader}
-        title={`Powering Your Success: Q and M Gas Services`}
-      />
-      <div className="md:px-8">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={TOP_TO_BOTTOM}
+        transition={{ duration: 1.0 }}
+      >
+        <PageHeader
+          description="At Q and M Gas, we're committed to being your one-stop shop for all things diesel. We offer a comprehensive suite of services designed to streamline your operations and ensure you have the fuel you need, when you need it."
+          image={serviceHeader}
+          title={`Powering Your Success: Q and M Gas Services`}
+        />
+      </motion.div>
+
+      <motion.div
+        className="md:px-8"
+        initial="hidden"
+        whileInView="visible"
+        variants={LEFT_TO_RIGHT}
+        transition={{ duration: 1.0 }}
+      >
         <OurBusiness isService />
-      </div>
-      <div>
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={LEFT_TO_RIGHT}
+        transition={{ duration: 1.0 }}
+      >
         <BulletPoint
           title="Benefits of Partnering with Q and M Gas:"
           points={bulletPoints}
         />
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={LEFT_TO_RIGHT}
+        transition={{ duration: 1.0 }}
+      >
         <Contactform />
-      </div>
+      </motion.div>
     </div>
   );
 };

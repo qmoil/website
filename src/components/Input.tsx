@@ -16,16 +16,14 @@ export default function Input({
   classDefinition,
 }: InputProps) {
   return (
-    <div
-      className={
-        classDefinition
-          ? classDefinition
-          : ' bg-white h-12 border gap-2 border-solid border-gray-500 flex justify-between text-black'
-      }
-    >
+    <div>
       {/* <label htmlFor={label}> {label} </label> */}
       <input
-        className="w-full h-full px-5 py-3"
+        className={
+          classDefinition
+            ? classDefinition
+            : ' bg-white h-12 border gap-2 border-solid border-gray-500 flex justify-between text-black w-full px-5 py-3'
+        }
         type={type}
         id={name}
         name={name}

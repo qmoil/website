@@ -1,5 +1,4 @@
 import Logo from '../assets/Logo.svg';
-import Arrow from '../assets/Arrow-left.svg';
 import { PATH } from '../utils/path-constants';
 import { Link } from 'react-router-dom';
 
@@ -27,21 +26,13 @@ const pages = [
 ];
 
 const Footer = () => {
-  const scrollToTop = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-
   return (
     <footer className="text-xs bottom-0 w-full bg-gray-800 text-white py-4 md:py-10 px-4 md:px-32">
       <div className="flex flex-col md:flex-row justify-between  md:items-center">
         <div className="w-20 mb-4 md:mb-0">
-          <a href="#">
+          <Link to={PATH.HOME} className="w-16 sm:w-20">
             <img src={Logo} alt="Q and M Logo" className="max-w-full h-auto" />
-          </a>
+          </Link>
         </div>
         <div className="flex flex-col md:flex-row flex-1 justify-center gap-6 md:gap-12 text-left">
           <div className="md:w-[500px]">
@@ -50,13 +41,13 @@ const Footer = () => {
             </p>
             <div className="flex flex-col gap-2 md:gap-5">
               <p>
-                <a href="tel:+2349037890629" className="underline">
-                  09037890629
+                <a href="tel:+2349063119291" className="underline">
+                  09063119291
                 </a>
               </p>
               <p>
-                <a href="mailto:dev.qandmoil@gmail.com" className="underline">
-                  dev.qandmoil@gmail.com
+                <a href="mailto:qmoilandgas@gmail.com" className="underline">
+                  qmoilandgas@gmail.com
                 </a>
               </p>
             </div>
@@ -112,13 +103,6 @@ const Footer = () => {
         <p>
           © {new Date().getFullYear()} Q & M Oil and Gas. All rights reserved.
         </p>
-      </div>
-      <div className="flex justify-center">
-        <div className="md:hidden flex justify-center items-center bg-white w-12 h-12 md:w-16 md:h-16 rounded-full mt-4 md:mt-0 ml-4">
-          <a href="#" onClick={scrollToTop}>
-            <img src={Arrow} alt="Arrow" className="max-w-full h-auto" />
-          </a>
-        </div>
       </div>
     </footer>
   );

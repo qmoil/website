@@ -40,7 +40,7 @@ const ScrollToTopButton = () => {
   }, [handleScroll]);
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className="fixed bottom-4 right-4 z-40">
       {isVisible && (
         <div className="flex justify-center items-center bg-white w-12 h-12 md:w-16 md:h-16 rounded-full transition-opacity duration-500 opacity-75 hover:opacity-100">
           <a href="#" onClick={scrollToTop} aria-label="Scroll to top">

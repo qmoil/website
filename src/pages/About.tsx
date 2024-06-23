@@ -4,6 +4,8 @@ import OurBusiness from '../components/OurBusiness';
 import BulletPoint from '../components/BulletPoint';
 import PageHeader from '../components/PageHeader';
 import Contactform from '../components/Contactform';
+import { motion } from 'framer-motion';
+import { LEFT_TO_RIGHT, TOP_TO_BOTTOM } from '../utils/animation-constants';
 
 const bulletPoints = [
   {
@@ -28,15 +30,29 @@ we prioritize timely deliveries and consistent fuel quality.`,
 const About = () => {
   return (
     <div className="mt-20 sm:mt-24 pt-12 md:mt-28 flex flex-col gap-8">
-      <PageHeader
-        description="A dedicated and reliable diesel distribution and supply company
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={TOP_TO_BOTTOM}
+        transition={{ duration: 1.0 }}
+      >
+        <PageHeader
+          description="A dedicated and reliable diesel distribution and supply company
           targeting retailers, industries, households, hotels, and restaurants
           in Lagos. With a commitment to offering the best prices, unparalleled
           services, and top quality products."
-        image={Rectangle65}
-        title={`Your Reliable Partner in Nigeria's Energy Future`}
-      />
-      <div className="flex flex-col md:flex-row md:m-auto md:px-16 md:justify-between gap-6 md:gap-10 px-4 sm:px-8 py-9 text-center">
+          image={Rectangle65}
+          title={`Your Reliable Partner in Nigeria's Energy Future`}
+        />
+      </motion.div>
+
+      <motion.div
+        className="flex flex-col md:flex-row md:m-auto md:px-16 md:justify-between gap-6 md:gap-10 px-4 sm:px-8 py-9 text-center"
+        initial="hidden"
+        whileInView="visible"
+        variants={LEFT_TO_RIGHT}
+        transition={{ duration: 1.0 }}
+      >
         <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[#1C1B42]">
           <h2>About</h2>
           <h2>Q and M</h2>
@@ -48,8 +64,14 @@ const About = () => {
           then, we've grown into a trusted partner for businesses of all sizes,
           powering their operations and driving their success.
         </p>
-      </div>
-      <div className="text-white text-center md:px-8">
+      </motion.div>
+      <motion.div
+        className="text-white text-center md:px-8"
+        initial="hidden"
+        whileInView="visible"
+        variants={LEFT_TO_RIGHT}
+        transition={{ duration: 1.0 }}
+      >
         <div className="bg-[#1C1B42] flex flex-col lg:flex-row justify-between items-center px-8 sm:px-12 lg:px-20 py-16 sm:py-24 lg:py-32">
           <h2 className="text-3xl sm:text-4xl font-bold lg:w-1/5">VISION</h2>
           <p className="text-base sm:text-lg font-bold lg:w-3/5">
@@ -69,16 +91,32 @@ const About = () => {
             energy needs of Lagos.
           </p>
         </div>
-      </div>
-      <div className="md:px-8">
+      </motion.div>
+      <motion.div
+        className="md:px-8"
+        initial="hidden"
+        whileInView="visible"
+        variants={LEFT_TO_RIGHT}
+        transition={{ duration: 1.0 }}
+      >
         <OurBusiness />
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={LEFT_TO_RIGHT}
+        transition={{ duration: 1.0 }}
+      >
         <BulletPoint title="Why Choose Q and M Gas?" points={bulletPoints} />
-      </div>
-      <div>
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={LEFT_TO_RIGHT}
+        transition={{ duration: 1.0 }}
+      >
         <Contactform />
-      </div>
+      </motion.div>
     </div>
   );
 };

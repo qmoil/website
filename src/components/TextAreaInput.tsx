@@ -22,7 +22,7 @@ const TextAreaInput = ({
   error,
 }: TextAreaInputProps) => {
   return (
-    <div className="mb-[45px]">
+    <div className="">
       <textarea
         id={id}
         onBlur={onBlur}

@@ -6,8 +6,8 @@ import Email from '../assets/email.svg';
 import TextAreaInput from './TextAreaInput';
 
 const formContact = [
-  { logo: Mobile, title: 'PHONE', value: '09037890629' },
-  { logo: Email, title: 'EMAIL', value: 'dev.qandmoil@gmail.com' },
+  { logo: Mobile, title: 'PHONE', value: '09063119291' },
+  { logo: Email, title: 'EMAIL', value: 'qmoilandgas@gmail.com' },
 ];
 
 export default function Contactform() {
