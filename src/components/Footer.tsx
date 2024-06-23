@@ -1,4 +1,4 @@
-import Logo from '../assets/Logo.svg';
+import Logo from '../assets/Logo2.svg';
 import { PATH } from '../utils/path-constants';
 import { Link } from 'react-router-dom';
 
