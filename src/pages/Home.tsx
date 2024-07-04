@@ -8,7 +8,6 @@ import Strategy from '../components/Strategy';
 import { PATH } from '../utils/path-constants';
 import { useNavigate } from 'react-router-dom';
 import { TOP_TO_BOTTOM, LEFT_TO_RIGHT } from '../utils/animation-constants';
-import Map from '../components/Map';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -95,7 +94,6 @@ const Home = () => {
       >
         <Contactform />
       </motion.div>
-      <Map />
     </div>
   );
 };

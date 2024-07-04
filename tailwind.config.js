@@ -17,6 +17,9 @@ export default {
     color: {
       'blue200': '#1C1B42'
     },
+    fontFamily:{
+      nunito: ["Nunito", "sans-serif"],
+    },
     extend: {},
   },
   plugins: [],

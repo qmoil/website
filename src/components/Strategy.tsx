@@ -6,7 +6,7 @@ import Strategy4 from '../assets/strategy4.svg';
 const strategies = [
   {
     title: 'Retailers: ',
-    description: 'gas station and independent retailers',
+    description: 'Gas station and independent retailers',
     image: Strategy1,
   },
   {
