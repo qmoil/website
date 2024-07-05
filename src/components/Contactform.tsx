@@ -1,50 +1,69 @@
-import Button from "./Button";
-import Input from "./Input";
+import Button from './Button';
+import Input from './Input';
+import ContactIMage from '../assets/contact_image.svg';
+import Mobile from '../assets/mobile.svg';
+import Email from '../assets/email.svg';
+import TextAreaInput from './TextAreaInput';
 
-type Contactform = {
-  name: string;
-  email: string;
-  phone: number;
-};
+const formContact = [
+  { logo: Mobile, title: 'PHONE', value: '09063119291' },
+  { logo: Email, title: 'EMAIL', value: 'qmoilandgas@gmail.com' },
+];
 
-type ContactformProps = {
-  title: string;
-  paragraph: string;
-};
-
-export default function Contactform({ title, paragraph }: ContactformProps) {
+export default function Contactform() {
   return (
-    <>
-      <div className="w-[545px] h-[497px] gap-10 ">
-        <div className="w-[545px] h-[127px] gap-5 ">
-          <h1 className="w-[356px] h-[63px] font-bold text-6xl text-[#090916] leading-[73.2px] ">
-            {title}
+    <div
+      id="contact"
+      className="md:items-center md:grid md:grid-cols-2 px-5 py-8 gap-10"
+    >
+      <div>
+        <div className="flex flex-col gap-5 px-2 text-center">
+          <h1 className="font-bold text-4xl md:text-6xl text-[#090916]">
+            Get in Touch
           </h1>
-          <p className="w-[545px] h-8 font-bold text-base leading-8 text-[#646262] ">
-            {paragraph}
+          <p className="font-bold text-base text-[#646262]">
+            We're here to answer your questions and discuss your needs.
           </p>
         </div>
 
-        <form className="w-[545px] h-[330px] gap-5 flex flex-col ">
-          <Input type="text" name="name" placeholder="Name" />
-
-          <Input type="email" name="email" placeholder="EMAIL:" />
-
-          <Input type="tel" name="phone" placeholder="Phone Number:" />
-
-          <Input
-            type="select"
-            name="how"
-            placeholder="How did you find us?"
-            isSelect
+        <form className="gap-5 flex flex-col mt-6">
+          <Input type="text" name="name" placeholder="Name *" />
+          <Input type="email" name="email" placeholder="Email *" />
+          <Input type="tel" name="phone" placeholder="Phone Number *" />
+          <TextAreaInput
+            classDef="w-[100%]"
+            name="moreInfo"
+            placeholder="How can i partner with you?"
           />
 
           <Button
-            title="submit"
-            classDefinition="bg-[Black] w-[545px] h-12 border px-5 py-3 gap-2 border-solid border-gray-500 "
+            title="Send"
+            classDefinition="bg-black hover:bg-gray-700 text-white h-12 border px-5 py-3 gap-2 border-solid border-gray-500 font-bold text-base"
           />
+
+          <div className="flex flex-col md:flex-row md:justify-between gap-3 mt-5">
+            {formContact.map((contact) => (
+              <div
+                className="flex gap-2 items-center font-bold text-[#05050B]"
+                key={contact.title}
+              >
+                <img src={contact.logo} alt="logo" className="w-7 h-7" />
+                <div className="text-xs leading-tight">
+                  <p className="whitespace-nowrap">{contact.title}</p>
+                  <p className="break-words">{contact.value}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </form>
       </div>
-    </>
+      <div className="mt-8 md:mt-0">
+        <img
+          src={ContactIMage}
+          alt="contact"
+          className="object-cover object-center w-full h-full"
+        />
+      </div>
+    </div>
   );
 }

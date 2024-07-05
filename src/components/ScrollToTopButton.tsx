@@ -4,21 +4,24 @@ import Arrow from '../assets/Arrow-left.svg';
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
   const scrollTimeout = useRef(null);
-  const hoverTimeout = useRef(null);
 
-  const scrollToTop = (event) => {
+  const scrollToTop = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
     event.preventDefault();
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   };
 
   const handleScroll = useCallback(() => {
     if (window.scrollY > 0) {
       setIsVisible(true);
-      clearTimeout(scrollTimeout.current);
-      scrollTimeout.current = setTimeout(() => {
+      if (scrollTimeout.current !== undefined) {
+        clearTimeout(scrollTimeout.current);
+      }
+      scrollTimeout.current = window.setTimeout(() => {
         setIsVisible(false);
       }, 2000);
     } else {
@@ -30,7 +33,9 @@ const ScrollToTopButton = () => {
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      clearTimeout(scrollTimeout.current);
+      if (scrollTimeout.current !== undefined) {
+        clearTimeout(scrollTimeout.current);
+      }
     };
   }, [handleScroll]);
 
@@ -47,7 +52,7 @@ const ScrollToTopButton = () => {
   };
 
   return (
-    <div className="fixed bottom-4 right-4">
+    <div className="fixed bottom-4 right-4 z-40">
       {isVisible && (
         <div
           onClick={scrollToTop}

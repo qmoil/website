@@ -1,12 +1,20 @@
 import { Outlet } from 'react-router-dom';
 import Footer from './Footer';
 import Header from './Header';
-import ScrollToTopButton from './ScrollToTopButton';
 
 const BodyWrapper = () => {
+  const [isSideNavOpen, setIsSideNavOpen] = useState<boolean>(false);
   return (
     <div className="relative w-full">
-      <Header />
+      <Navbar
+        isSideNavOpen={isSideNavOpen}
+        setIsSideNavOpen={setIsSideNavOpen}
+      />
+      <SideNavbar
+        isSideNavOpen={isSideNavOpen}
+        setIsSideNavOpen={setIsSideNavOpen}
+      />
+      <ScrollToTopButton />
       <Outlet />
       <ScrollToTopButton />
       <Footer />
