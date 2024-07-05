@@ -61,19 +61,19 @@ const SideNavbar = ({ isSideNavOpen, setIsSideNavOpen }: SideNavbarProps) => {
         </button>
         <div className="text-white text-sm my-24 flex flex-col">
           {NAVLINKS.map((link) => {
-            if (link.title === 'Contact') {
-              return (
-                <a
-                  className={`px-5 hover-link block md:inline hover:text-white py-2.5 ${
-                    checkActive('#contact') ? 'text-white' : 'text-gray-400'
-                  }`}
-                  href="#contact"
-                  onClick={() => toggleNavbar()}
-                >
-                  {link.title}
-                </a>
-              );
-            }
+            // if (link.title === 'Contact') {
+            //   return (
+            //     <a
+            //       className={`px-5 hover-link block md:inline hover:text-white py-2.5 ${
+            //         checkActive('#contact') ? 'text-white' : 'text-gray-400'
+            //       }`}
+            //       href="#contact"
+            //       onClick={() => toggleNavbar()}
+            //     >
+            //       {link.title}
+            //     </a>
+            //   );
+            // }
             return (
               <div
                 key={link.title}
