@@ -54,18 +54,18 @@ const Navbar = ({ isSideNavOpen, setIsSideNavOpen }: NavbarProps) => {
           className={`hidden md:flex md:flex-row gap-6 md:gap-8 lg:gap-12 text-base font-bold absolute md:static top-16 left-0 w-full md:w-auto bg-gray-50 md:bg-transparent p-4 md:p-0`}
         >
           {NAVLINKS.map((link) => {
-            if (link.title === 'Contact') {
-              return (
-                <a
-                  className={`hover-link block md:inline hover:text-blue-500 ${
-                    checkActive('#contact') ? 'text-blue-500' : ''
-                  }`}
-                  href="#contact"
-                >
-                  {link.title}
-                </a>
-              );
-            }
+            // if (link.title === 'Contact') {
+            //   return (
+            //     <a
+            //       className={`hover-link block md:inline hover:text-blue-500 ${
+            //         checkActive('#contact') ? 'text-blue-500' : ''
+            //       }`}
+            //       href="#contact"
+            //     >
+            //       {link.title}
+            //     </a>
+            //   );
+            // }
             return (
               <Link
                 key={link.title}

@@ -9,7 +9,8 @@ const pages = [
   },
   {
     title: 'Contact Us',
-    linkedTo: PATH.HOME + '#contact',
+    linkedTo: PATH.CONTACT,
+    // linkedTo: PATH.HOME + '#contact',
   },
   // {
   //   title: 'Blog',
@@ -56,13 +57,13 @@ const Footer = () => {
             <nav className="flex justify-between  w-full gap-6 md:gap-12">
               <ul className="flex flex-col text-left text-xs space-y-2">
                 {pages.map((page) => {
-                  if (page.title === 'Contact Us') {
-                    return (
-                      <a className="hover:hover:text-blue-500" href="#contact">
-                        {page.title}
-                      </a>
-                    );
-                  }
+                  // if (page.title === 'Contact Us') {
+                  //   return (
+                  //     <a className="hover:hover:text-blue-500" href="#contact">
+                  //       {page.title}
+                  //     </a>
+                  //   );
+                  // }
                   return (
                     <Link
                       className="hover:hover:text-blue-500"

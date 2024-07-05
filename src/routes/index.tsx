@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { PATH } from '../utils/path-constants';
 import { useEffect } from 'react';
 import BodyWrapper from '../components/BodyWrapper';
-import { About, Home, Services } from '../pages';
+import { About, Contact, Home, Services } from '../pages';
 
 const MainRoutes = () => {
   const ScrollToTop = () => {
@@ -24,7 +24,7 @@ const MainRoutes = () => {
             <Route index element={<Home />} />
             <Route path={PATH.ABOUT} element={<About />} />
             <Route path={PATH.SERVICE} element={<Services />} />
-            <Route path={PATH.CONTACT} element={<About />} />
+            <Route path={PATH.CONTACT} element={<Contact />} />
           </Route>
         </Routes>
       </BrowserRouter>
