@@ -3,7 +3,7 @@ import Arrow from '../assets/Arrow-left.svg';
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const scrollTimeout = useRef(null);
+  const scrollTimeout = useRef<number | undefined>(undefined);
 
   const scrollToTop = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
@@ -39,29 +39,13 @@ const ScrollToTopButton = () => {
     };
   }, [handleScroll]);
 
-  const handleMouseEnter = () => {
-    clearTimeout(scrollTimeout.current);
-    clearTimeout(hoverTimeout.current);
-    setIsVisible(true);
-  };
-
-  const handleMouseLeave = () => {
-    hoverTimeout.current = setTimeout(() => {
-      setIsVisible(false);
-    }, 2000);
-  };
-
   return (
     <div className="fixed bottom-4 right-4 z-40">
       {isVisible && (
-        <div
-          onClick={scrollToTop}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          className="flex justify-center items-center bg-white w-12 h-12 md:w-16 md:h-16 rounded-full transition-opacity duration-500 opacity-75 hover:opacity-100"
-          aria-label="Scroll to top"
-        >
-          <img src={Arrow} alt="Arrow" className="max-w-full" />
+        <div className="flex justify-center items-center bg-white w-12 h-12 md:w-16 md:h-16 rounded-full transition-opacity duration-500 opacity-75 hover:opacity-100">
+          <a href="#" onClick={scrollToTop} aria-label="Scroll to top">
+            <img src={Arrow} alt="Arrow" className="max-w-full" />
+          </a>
         </div>
       )}
     </div>

@@ -66,6 +66,7 @@ const Footer = () => {
                   // }
                   return (
                     <Link
+                    key={page.linkedTo}
                       className="hover:hover:text-blue-500"
                       to={page.linkedTo}
                     >

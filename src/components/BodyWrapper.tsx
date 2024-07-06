@@ -1,6 +1,9 @@
 import { Outlet } from 'react-router-dom';
 import Footer from './Footer';
-import Header from './Header';
+import Navbar from './Navbar';
+import ScrollToTopButton from './ScrollToTopButton';
+import { useState } from 'react';
+import SideNavbar from './SideNavBar';
 
 const BodyWrapper = () => {
   const [isSideNavOpen, setIsSideNavOpen] = useState<boolean>(false);
@@ -16,7 +19,6 @@ const BodyWrapper = () => {
       />
       <ScrollToTopButton />
       <Outlet />
-      <ScrollToTopButton />
       <Footer />
     </div>
   );
