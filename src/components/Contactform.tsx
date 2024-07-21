@@ -169,7 +169,7 @@ export default function Contactform() {
               <TextAreaInput
                 classDef="w-[100%]"
                 name="enquiries"
-                placeholder="How can i partner with you?"
+                placeholder="Enquiries"
                 value={values.enquiries}
                 changed={handleChange}
                 onBlur={handleBlur}
