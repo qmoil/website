@@ -19,6 +19,8 @@ export default {
     },
     fontFamily:{
       nunito: ["Nunito", "sans-serif"],
+      sourceSan: ["Source Sans 3", "sans-serif"],
+      grotesk: ["Familjen Grotesk", "sans-serif"]
     },
     extend: {},
   },

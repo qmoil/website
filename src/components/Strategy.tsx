@@ -36,7 +36,7 @@ export default function Strategy() {
         {strategies.map((strategy) => (
           <div
             key={strategy.title}
-            className="p-5 text-3xl text-center relative bg-cover bg-center h-64 md:h-96 flex items-end justify-center"
+            className="p-5 text-3xl text-center relative bg-cover bg-center h-64 md:h-96 flex items-end justify-center font-sourceSan"
             style={{ backgroundImage: `url('${strategy.image}')` }}
           >
             <div className="absolute inset-0 bg-black bg-opacity-50"></div>

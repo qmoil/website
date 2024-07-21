@@ -28,20 +28,18 @@ const ourBusinessObj = [
   {
     img: Frame4,
     h1: 'Gas Distribution',
-    p: 'At Q&M Gas, we\'re committed to delivering top-quality gas products and exceptional service. Experience the convenience of reliable gas delivery, competitive pricing, and unmatched customer support.'
-  }
+    p: "At Q&M Gas, we're committed to delivering top-quality gas products and exceptional service. Experience the convenience of reliable gas delivery, competitive pricing, and unmatched customer support.",
+  },
 ];
 
 const OurBusiness = ({ isService }: OurBusinessProps) => {
   const [ourBusiness] = useState(ourBusinessObj);
 
   return (
-    <div
-      className='text-[#090916] p-5 md:p-10'
-    >
+    <div className="text-[#090916] p-5 md:p-10">
       {!isService ? (
         <div className="text-5xl font-bold mb-6">
-          <h1 className='text-center'>Our Business</h1>
+          <h1 className="text-center">Our Business</h1>
         </div>
       ) : (
         <h1 className="font-bold text-center mb-5 md:mb-10 text-4xl md:text-6xl">
@@ -54,7 +52,7 @@ const OurBusiness = ({ isService }: OurBusinessProps) => {
         {ourBusiness.map((business, index) => (
           <div
             key={index}
-            className='border text-[#312F2F] p-2 rounded-lg shadow-md'
+            className="border text-[#312F2F] p-2 rounded-lg shadow-md"
           >
             <div className="mb-2">
               <img
@@ -63,7 +61,7 @@ const OurBusiness = ({ isService }: OurBusinessProps) => {
                 className="w-full h-48 object-cover rounded-md"
               />
             </div>
-            <div className=" p-4 font-bold">
+            <div className=" p-4 font-bold font-sourceSan text-[#312F2F]">
               <h1 className="text-2xl mb-4 text-[#0C0C0C]">{business.h1}</h1>
               <p className="text-xs">{business.p}</p>
             </div>
@@ -76,7 +74,7 @@ const OurBusiness = ({ isService }: OurBusinessProps) => {
         {ourBusiness.map((business, index) => (
           <div
             key={index}
-            className='border text-[#312F2F] p-4 rounded-lg mr-4 min-w-72'
+            className="border text-[#312F2F] p-4 rounded-lg mr-4 min-w-72"
           >
             <div className="mb-2">
               <img
@@ -85,7 +83,7 @@ const OurBusiness = ({ isService }: OurBusinessProps) => {
                 className="w-full h-48 object-cover rounded-md"
               />
             </div>
-            <div className=" p-4 font-bold">
+            <div className=" p-4 font-bold font-sourceSan text-[#312F2F]">
               <h1 className="text-2xl mb-4">{business.h1}</h1>
               <p className="text-xs">{business.p}</p>
             </div>

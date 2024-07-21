@@ -16,7 +16,7 @@ const MainRoutes = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen text-black">
+    <div className="bg-white min-h-screen text-black font-grotesk">
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
