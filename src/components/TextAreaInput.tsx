@@ -26,7 +26,7 @@ const TextAreaInput = ({
       <textarea
         id={id}
         onBlur={onBlur}
-        className={`h-40 px-5 py-3 text-black dark:text-white border border-solid border-gray-500 resize-none ${classDef}`}
+        className={`h-40 px-5 py-3 text-black border border-solid border-gray-500 resize-none ${classDef}`}
         name={name}
         onChange={changed}
         value={value}

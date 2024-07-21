@@ -5,7 +5,7 @@ import Map from '../components/Map';
 
 const Contact = () => {
   return (
-    <div>
+    <div className="mt-20 sm:mt-24 md:mt-28 flex flex-col">
       <motion.div
         initial="hidden"
         whileInView="visible"

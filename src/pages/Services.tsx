@@ -39,6 +39,21 @@ const Services = () => {
           image={serviceHeader}
           title={`Powering Your Success: Q & M Oil and Gas Services`}
         />
+
+        <motion.div
+          className="px-5 md:px-8 mt-8 text-base sm:text-lg lg:text-xl font-light font-sourceSan"
+          initial="hidden"
+          whileInView="visible"
+          variants={LEFT_TO_RIGHT}
+          transition={{ duration: 1.0 }}
+        >
+          At Q&M Gas, we're your trusted partner for all your fuel needs. We
+          specialize in providing high-quality diesel, ensuring your operations
+          run seamlessly. But our commitment extends beyond diesel. Discover a
+          wide range of gas options to suit your personal or commercial
+          requirements. From reliable supply to exceptional service, we're
+          dedicated to meeting your fuel demands efficiently and effectively.
+        </motion.div>
       </motion.div>
 
       <motion.div
