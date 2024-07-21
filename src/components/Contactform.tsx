@@ -38,7 +38,7 @@ export default function Contactform() {
 
           <Button
             title="Send"
-            classDefinition="bg-black hover:bg-gray-700 text-white h-12 border px-5 py-3 gap-2 border-solid border-gray-500 font-bold text-base"
+            classDefinition="bg-black hover:bg-[#242442] text-white h-12 border px-5 py-3 gap-2 border-solid border-gray-500 font-bold text-base"
           />
 
           <div className="flex flex-col md:flex-row md:justify-between gap-3 mt-5">
