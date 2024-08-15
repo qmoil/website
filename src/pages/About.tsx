@@ -81,7 +81,7 @@ const About = () => {
         transition={{ duration: 1.0 }}
       >
         <div className="flex flex-col items-center gap-4 text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[#1C1B42]">
-          <h2>About Q and M</h2>
+          <h2>About Q&M Oil and Gas</h2>
           <p className="text-base sm:text-lg font-thin px-5 font-sourceSan text-[#3D3B3B]">
             Founded in 2024, Q & M Oil and Gas began with a vision to
             revolutionize the diesel supply chain in Nigeria. We recognized the
