@@ -35,7 +35,7 @@ const Home = () => {
             Fueling the Future Powering Progress.
           </h1>
           <p className="mt-4 text-lg md:text-xl text-[#3D3B3B] font-sourceSan">
-            Decades of experience delivering safe, efficient, and sustainable
+            Wealth of experience delivering safe, efficient, and sustainable
             solutions.
           </p>
           <Button
