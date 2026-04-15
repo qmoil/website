@@ -1,4 +1,4 @@
-import Logo from '../assets/Logo2.svg';
+import Logo from '../assets/Logo_White.png';
 import { PATH } from '../utils/path-constants';
 import { Link } from 'react-router-dom';
 
@@ -30,8 +30,8 @@ const Footer = () => {
   return (
     <footer className="text-xs bottom-0 w-full bg-gray-800 text-white py-4 md:py-10 px-4 md:px-32">
       <div className="flex flex-col md:flex-row justify-between  md:items-center">
-        <div className="w-20 mb-4 md:mb-0">
-          <Link to={PATH.HOME} className="w-16 sm:w-20">
+        <div className="w-24 md:w-32 mb-4 md:mb-0">
+          <Link to={PATH.HOME} className="w-full">
             <img src={Logo} alt="Logo" className="max-w-full h-auto" />
           </Link>
         </div>
@@ -82,7 +82,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a href="#" className="hover:hover:text-blue-500">
-                    Twitter
+                    X
                   </a>
                 </li>
                 <li>
