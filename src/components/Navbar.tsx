@@ -1,4 +1,4 @@
-import Logo from '../assets/Logo.svg';
+import Logo from '../assets/Logo.png';
 import { Link, useLocation } from 'react-router-dom';
 import { PATH } from '../utils/path-constants';
 import { NAVLINKS } from '../utils/navbar-constants';
@@ -25,8 +25,8 @@ const Navbar = ({ isSideNavOpen, setIsSideNavOpen }: NavbarProps) => {
 
   return (
     <header className="bg-white flex items-center justify-between fixed inset-y-0 w-full px-6 py-4 sm:px-8 sm:py-4 lg:px-24 lg:py-4 h-24 md:h-32 z-40">
-      <Link to={PATH.HOME} className="w-20 h-24  md:w-28 md:h-32">
-        <img src={Logo} alt="Q & M Logo" className="w-full h-full" />
+      <Link to={PATH.HOME} className="w-24 md:w-32">
+        <img src={Logo} alt="Q & M Logo" className="w-full h-auto object-contain" />
       </Link>
       <nav>
         <div className="flex md:hidden">
